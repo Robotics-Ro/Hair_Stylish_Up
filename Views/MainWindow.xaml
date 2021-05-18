@@ -1,0 +1,35 @@
+﻿<Window x:Class="Prism_HairStylishUp.Views.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:vm ="clr-namespace:Prism_HairStylishUp.ViewModels"
+             WindowStartupLocation="CenterScreen"
+             Height="700" Width="390" Background="White"
+             Title="#Hair Stylish Up"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Closed">
+                <prism:InvokeCommandAction Command="{Binding ClosedCommand}" />
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <Label Content="HairStyle_ Up" FontSize="70" FontFamily="Kunstler Script" FontWeight="Bold" Margin="22,36,22.457,544"/>
+        <Label Content="正々堂々、&#xA;自分と向き合おう" FontSize="35" HorizontalAlignment="Right" Margin="0,260.001,63.996,296.002" Background="{x:Null}" Foreground="#FFE87272">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Label.Effect>
+        </Label>
+
+        <StackPanel VerticalAlignment="Bottom">
+            <Button Content="はじめる"  FontSize="30" Command="{Binding StartCommand}" CommandParameter="SecondPage" BorderBrush="{x:Null}" Background="#FFD39292"/>
+            <Label Content="コイケスタイリッシュ研究所" HorizontalAlignment="Left" FontSize="20" />
+            <Label Content="＜世界をもっと豊かに＞" HorizontalAlignment="Right" FontSize="30" FontWeight="Bold" />
+
+        </StackPanel>
+        <ContentControl Grid.Row="1"
+                        prism:RegionManager.RegionName="ContentRegion" >
+        </ContentControl>
+
+    </Grid>
+</Window>

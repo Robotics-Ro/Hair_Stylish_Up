@@ -1,0 +1,25 @@
+﻿<UserControl
+        x:Class="Prism_HairStylishUp.Views.LibraryPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Height="700" Width="390" Background="White"
+        >
+    <Grid>
+        <Rectangle Fill="#FFBADED7" HorizontalAlignment="Left" Height="68.112" VerticalAlignment="Top" Width="92" RadiusX="20" RadiusY="20" Margin="292,578.555,0,0"/>
+        <Rectangle Fill="#FFBADED7" HorizontalAlignment="Left" Height="68.112" VerticalAlignment="Top" Width="92" RadiusX="20" RadiusY="20" Margin="195,578.555,0,0"/>
+        <Rectangle Fill="#FFBADED7" HorizontalAlignment="Left" Height="68.112" VerticalAlignment="Top" Width="92" RadiusX="20" RadiusY="20" Margin="98,578.555,0,0"/>
+        <Rectangle Fill="#FFBADED7" HorizontalAlignment="Left" Height="68.112" VerticalAlignment="Top" Width="92" RadiusX="20" RadiusY="20" Margin="2.667,578.555,0,0"/>
+
+        <Image  Height="390" VerticalAlignment="Top" Width="390" Source="{Binding Picture}" Margin="0,117.333,0,0"/>
+        <Button Content="戻る" HorizontalAlignment="Left" Height="55" Margin="14,585.333,0,0" VerticalAlignment="Top" Width="70.667" Command="{Binding CancelCommand}" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" FontWeight="Bold"/>
+        <Button Content="送る" HorizontalAlignment="Left" Height="55" Margin="208.667,585.333,0,0" VerticalAlignment="Top" Width="67" Command="{Binding PostCommand}" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" FontWeight="Bold"/>
+        <ToggleButton Content="{Binding ConvertLabel}" HorizontalAlignment="Left" Height="55" Margin="303.667,585.333,0,0" VerticalAlignment="Top" Width="71" IsChecked ="{Binding Toggle}" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="18"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Height="117.333" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" FontSize="40" FontWeight="Bold"><Run Text="ディバイスの中から"/><LineBreak/><Run Text="写真を選んでください。"/></TextBlock>
+        <Button Content="ファイルを&#xD;&#xA;読み込む" HorizontalAlignment="Left" Height="55" Margin="108.444,585.333,0,0" VerticalAlignment="Top" Width="71" Command="{Binding LoadCommand}" RenderTransformOrigin="-1.222,0.497" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" FontWeight="Bold"/>
+        <!-- <Label HorizontalContentAlignment="Center" Content="Before" HorizontalAlignment="Left" Height="26" Margin="64,512.333,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="268" FontFamily="Yet R" FontSize="24"/> -->
+
+    </Grid>
+</UserControl>

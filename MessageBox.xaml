@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Prism_HairStylishUp.MessageBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             Height="100" Width="550" Background="White">
+    <Grid>
+        <StackPanel>
+            <Label Content="{Binding Message}" Height="65"/>
+            <Button Content="OK" Margin="10" Command="{Binding OKButton}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

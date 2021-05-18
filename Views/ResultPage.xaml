@@ -1,0 +1,24 @@
+﻿<UserControl
+             x:Class="Prism_HairStylishUp.Views.ResultPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"             
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             
+             Height="700" Width="390" Background="White"
+        >
+    <Grid>
+        <!--<Image Height="390" Width="390" Source="{Binding Result}" Margin="0,-74.333,0,0"/> -->
+        <Image Height="256" Width="256" Source="{Binding Result}" Margin="67,302,67,142"/>
+        <Rectangle Fill="#FFBADED7" HorizontalAlignment="Left" Height="72.722" VerticalAlignment="Top" Width="110.556" RadiusX="20" RadiusY="20" Margin="230.555,585.724,0,0"/>
+        <Rectangle Fill="#FFBADED7" HorizontalAlignment="Left" Height="72.722" VerticalAlignment="Top" Width="110.556" RadiusX="20" RadiusY="20" Margin="61.222,585.724,0,0"/>
+        <Image Height="256" Width="256" Source="{Binding CapturedPicture}" Margin="67,10,67,434"/>
+
+        <Button Content="やり直し" HorizontalAlignment="Left" Height="55" Margin="73.111,594.001,0,0" VerticalAlignment="Top" Width="84" Command="{Binding RepeatCaptureCommand}" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="25"/>
+        <Button Content="印刷" HorizontalAlignment="Left" Height="55" Margin="245.111,594.001,0,0" VerticalAlignment="Top" Width="84" Command="{Binding ResultCaptureCommand}" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="25"/>
+        <Label HorizontalContentAlignment="Center" Content="Before" HorizontalAlignment="Left" Height="26" Margin="67,271,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="268" FontFamily="Yet R" FontSize="24"/>
+        <Label HorizontalContentAlignment="Center" Content="After" HorizontalAlignment="Left" Height="26.001" Margin="67,563,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="268" FontFamily="Yet R" FontSize="24"/>
+    </Grid>
+</UserControl>

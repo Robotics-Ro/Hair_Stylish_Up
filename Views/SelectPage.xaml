@@ -1,0 +1,43 @@
+﻿<UserControl
+        x:Class="Prism_HairStylishUp.Views.SelectPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        
+        Height="700" Width="390" Background="White"
+        >
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+    <Grid>
+        <Grid Margin="201.888,550.611,44.445,45.889">
+            <Rectangle Fill="#FFBADED7" HorizontalAlignment="Left" Height="76.778" VerticalAlignment="Top" Width="123.667" RadiusX="20" RadiusY="20" Margin="10,16.722,0,0"/>
+            <Button x:Name="CameraButton" HorizontalAlignment="Left" Height="54.445" Margin="31.759,23.5,0,25.555" VerticalAlignment="Center" Width="79" RenderTransformOrigin="-1.993,1.816" FontSize="24" Command="{Binding CameraCommand}" CommandParameter="CameraPage" BorderBrush="{x:Null}" FontFamily="Arial Black">
+                
+                <Button.Background>
+                    <ImageBrush ImageSource="free-icon-camera-4291258.png"/>
+                </Button.Background>
+            </Button>
+            <Rectangle x:Name ="Error"  Height="83" Margin="10,11,0,0" Stroke="Black" VerticalAlignment="Top" Width="124" Visibility="Hidden">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="free_mark_batsu_illust_898.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
+        <Grid Margin="35.555,550.611,210.778,45.889">
+            <Rectangle Fill="#FFBADED7" HorizontalAlignment="Left" Height="76.778" VerticalAlignment="Top" Width="123.667" RadiusX="20" RadiusY="20" Margin="10,16.722,0,0"/>
+            <Button x:Name="AlbumButton" Margin="24.557,19.778,27.11,16.722" RenderTransformOrigin="-1.993,1.816" FontSize="24" Command="{Binding LibraryCommand}" CommandParameter="LibraryPage" BorderBrush="{x:Null}" FontFamily="Arial Black" >
+                <Button.Background>
+                    <ImageBrush ImageSource="free-icon-photo-album-781222.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Rectangle Fill="#FFD53333" HorizontalAlignment="Left" Height="71.817" Margin="0,10,0,0" VerticalAlignment="Top" Width="24"/>
+        <TextBlock HorizontalAlignment="Right" Height="71.817" Margin="0,10,0,0" TextWrapping="Wrap" Text="写真を選択" VerticalAlignment="Top" Width="366" FontSize="48"  FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="100" Margin="24,99.017,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" FontSize="22"><Run Text="なるべく無表情、正面の顔写真"/><LineBreak/><Run Text="を選んでください。"/></TextBlock>
+        <Image Margin="56.666,179.017,57.023,143.5" Source="StartImage.jpg" Stretch="Fill"/>
+    </Grid>
+
+</UserControl>
